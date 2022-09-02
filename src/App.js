@@ -10,6 +10,9 @@ function App() {
   const[nextValid, setNextValid] = useState(true);
   const [butValid, setButValid] = useState(true)
   const [Error1, setError1] = useState(false)
+  const [Error2, setError2] = useState(false)
+  const [Loading1, setLoading1] = useState(false)
+  const [Loading2, setLoading2] = useState(false)
   const validateTweet = new RegExp(/((https?):\/\/)?(www.)?twitter\.com(\/@?(\w){1,15})\/status\/[0-9]{19}\?/);
   const token = "AAAAAAAAAAAAAAAAAAAAAH%2FpgQEAAAAAOeUVljoK7fFyhzljKOQmKRG9MHU%3DehQiyRP2VCiW6UyMOSiw6lDir3lMzrZb6145JdGmuGPHYRP0nv";
   const twit = "This is a test twit"
@@ -59,7 +62,8 @@ function App() {
   }
 
   const handleClick = ()=>{
-    fetch('http://localhost:3001/gettweet',{
+    setLoading1(true)
+    fetch('http://34.125.117.167:3001/gettweet',{
       method:'POST',
       headers:{
         Accept: 'application.json',
@@ -73,7 +77,8 @@ function App() {
       setStep(2);
       setButValid(false)
       setNextValid(true)
-    }else{setError1(true)}
+      setLoading1(false)
+    }else{setError1(true);setLoading1(false)}
   })
   }
 
@@ -82,7 +87,8 @@ function App() {
   }
 
   const handleFollow = ()=>{
-    fetch('http://localhost:3001/getfollowers',{
+    setLoading2(true)
+    fetch('http://34.125.117.167:3001/getfollowers',{
       method:'POST',
       headers:{
         Accept: 'application.json',
@@ -92,7 +98,22 @@ function App() {
         id: '882932059022385152'
       })
     }).then(response => response.json())
-    .then((data) => {console.log(data.data)})
+    .then((data) => {
+      for(let i = 0; i < data.data.length; i++){
+        if(i === (data.data.length - 1) && data.data[i].username !== username){
+          setLoading2(false)
+          setError2(true)
+        }
+        if(data.data[i].username === username){
+          setLoading2(false)
+          window.open("https:fb.com", '_blank')
+        }
+        else{
+          console.log("Hello")
+          continue
+        }
+      }
+    })
   }
 
   return (
@@ -106,13 +127,14 @@ function App() {
         <div className={step === 1 ? 'form1 show' : 'form1'}>
           <button disabled={step === 1 ? false : true} className='tweetButton' onClick={handleTweetClick}>Tweet</button>
           <input disabled={step === 1 ? false : true} placeholder='Enter tweet link'  name='TweetLink' onChange={handleChange}></input>
-          <button disabled={nextValid} onClick={handleClick} className="Next">Next</button>
+          <button disabled={nextValid} onClick={handleClick} className="Next">{Loading1? "↻" : "Next"}</button>
           <p className={Error1? "error show1" : "error"}>This is not a valid tweet</p>
         </div>
         <div className={step === 2 ? 'form2 show' : 'form2'}>
             <h3>Follow this account</h3>
             <button disabled={butValid}>Follow</button>
-            <button disabled={butValid} onClick={handleFollow}>Click here to join</button>
+            <button disabled={butValid} onClick={handleFollow}>{Loading1? "↻" : "Click Here to Join"}</button>
+            <p className={Error2? "error show1" : "error"}>Ensure you followed the account</p>
         </div>
       </div>
     </div>
