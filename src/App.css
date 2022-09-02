@@ -1,38 +1,695 @@
-.App {
-  text-align: center;
+body{
+  background-color: #FEEAC4;
+  color: hsl(355deg 83% 43%);;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media all and (max-width:29.99em){
+  .App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .Images{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* right: 10vw; */
+  }
+  
+  .Images img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .second{
+    position: relative;
+    right: 3vw;
+  }
+  
+  .first{
+    width: 60% !important;
+  }
+  
+  .Forms{
+    position: relative;
+    left: 5vw;
+    width: 70%;
+  }
+  
+  .Forms h2{
+    font-size: 5vw;
+    text-align: center;
+  }
+  
+  .form1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+  }
+  
+  .form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+    position: relative;
+    bottom: 5vw;
+  }
+  
+  .show{
+    opacity: 1;
+  }
+  
+  .form1 .tweetButton{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 2vw 5.5vw 2vw 5.5vw;
+    font-size: 3.5vw;
+    border-radius: 3.5vw;
+  }
+  
+  input[name="TweetLink"]{
+    width: 90%;
+    border: thin solid #FEEAC4;
+    padding: 3vw 0vw 3vw 3vw;
+    background-color: hsl(355deg 83% 43%);
+    border-radius: 1.5vw;
+    font-size: 4vw;
+    color: #FEEAC4;
+  }
+  
+  input[name="TweetLink"]::placeholder{
+    color: #FEEAC4;
+  }
+  
+  .Next{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 2vw 5.5vw 2vw 5.5vw;
+    font-size: 3.5vw;
+    border-radius: 3.5vw;
+  }
+  
+  button:disabled,
+  button[disabled]{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 2vw 5.5vw 2vw 5.5vw;
+    font-size: 3.5vw;
+    border-radius: 3.5vw;
+    opacity: 0.3;
+  }
+  
+  .error{
+    font-size: 3vw;
+    position: relative;
+    bottom: 2vw;
+    visibility: hidden;
+  }
+  
+  .show1{
+    visibility: visible;
+  }
+  
+  .form2 button{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    padding: 2vw 5.5vw 2vw 5.5vw;
+    font-size: 3.5vw;
+    border-radius: 3.5vw;
+    margin-bottom: 1.2vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width:30em) and (max-width:47.99em){
+  .App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .Images{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* right: 10vw; */
+  }
+  
+  .Images img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .second{
+    position: relative;
+    right: 3vw;
+  }
+  
+  .first{
+    width: 60% !important;
+  }
+  
+  .Forms{
+    position: relative;
+    left: 5vw;
+    width: 70%;
+  }
+  
+  .Forms h2{
+    font-size: 3.5vw;
+    text-align: center;
+  }
+  
+  .form1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+  }
+  
+  .form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+    position: relative;
+    bottom: 5vw;
+  }
+  
+  .show{
+    opacity: 1;
+  }
+  
+  .form1 .tweetButton{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 1.5vw 5vw 1.5vw 5vw;
+    font-size: 2vw;
+    border-radius: 3vw;
+  }
+  
+  input[name="TweetLink"]{
+    width: 70%;
+    border: thin solid #FEEAC4;
+    padding: 2vw 0vw 2vw 2vw;
+    background-color: hsl(355deg 83% 43%);
+    border-radius: 0.8vw;
+    font-size: 2vw;
+    color: #FEEAC4;
+  }
+  
+  input[name="TweetLink"]::placeholder{
+    color: #FEEAC4;
+  }
+  
+  .Next{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 1.5vw 5vw 1.5vw 5vw;
+    font-size: 2vw;
+    border-radius: 3vw;
+  }
+  
+  button:disabled,
+  button[disabled]{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 1.5vw 5vw 1.5vw 5vw;
+    font-size: 2vw;
+    border-radius: 3vw;
+    opacity: 0.3;
+  }
+  
+  .error{
+    font-size: 3vw;
+    position: relative;
+    bottom: 2vw;
+    visibility: hidden;
+  }
+  
+  .show1{
+    visibility: visible;
+  }
+  
+  .form2 button{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    padding: 1.5vw 5vw 1.5vw 5vw;
+    font-size: 2vw;
+    border-radius: 3vw;
+    margin-bottom: 1.2vw;
+  }
+}
+
+@media (min-width:48em) and (max-width:62em){
+  .App{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .Images{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* right: 10vw; */
+  }
+  
+  .Images img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .second{
+    position: relative;
+    right: 3vw;
+  }
+  
+  .first{
+    width: 60% !important;
+  }
+  
+  .Forms{
+    position: relative;
+    left: 5vw;
+    width: 40%;
+  }
+  
+  .Forms h2{
+    font-size: 2.8vw;
+  }
+  
+  .form1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+  }
+  
+  .form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+    position: relative;
+    bottom: 5vw;
+  }
+  
+  .show{
+    opacity: 1;
+  }
+  
+  .form1 .tweetButton{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.8vw 2.2vw 0.8vw 2.2vw;
+    font-size: 1.8vw;
+    border-radius: 2vw;
+  }
+  
+  input[name="TweetLink"]{
+    width: 70%;
+    border: thin solid #FEEAC4;
+    padding: 1vw 0vw 1vw 1vw;
+    background-color: hsl(355deg 83% 43%);
+    border-radius: 0.5vw;
+    color: #FEEAC4;
+    font-size: 1.8vw;
+  }
+  
+  input[name="TweetLink"]::placeholder{
+    color: #FEEAC4;
+  }
+  
+  .Next{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1.8vw;
+    border-radius: 2vw;
+  }
+  
+  button:disabled,
+  button[disabled]{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1.8vww;
+    border-radius: 2vw;
+    opacity: 0.3;
+  }
+  
+  .error{
+    font-size: 2vw;
+    position: relative;
+    bottom: 2vw;
+    visibility: hidden;
+  }
+  
+  .show1{
+    visibility: visible;
+  }
+  
+  .form2 button{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1.8vw;
+    border-radius: 2vw;
+    margin-bottom: 1.2vw;
+  }
+}
+
+@media (min-width:62em) and (max-width:75em){
+  .App{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .Images{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* right: 10vw; */
+  }
+  
+  .Images img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .second{
+    position: relative;
+    right: 3vw;
+  }
+  
+  .first{
+    width: 60% !important;
+  }
+  
+  .Forms{
+    position: relative;
+    left: 5vw;
+    width: 40%;
+  }
+  
+  .Forms h2{
+    font-size: 2vw;
+  }
+  
+  .form1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+  }
+  
+  .form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+    position: relative;
+    bottom: 5vw;
+  }
+  
+  .show{
+    opacity: 1;
+  }
+  
+  .form1 .tweetButton{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.7vw 2.3vw 0.7vw 2.3vw;
+    font-size: 1.3vw;
+    border-radius: 2vw;
+  }
+  
+  input[name="TweetLink"]{
+    width: 70%;
+    border: thin solid #FEEAC4;
+    padding: 1vw 0vw 1vw 1vw;
+    background-color: hsl(355deg 83% 43%);
+    border-radius: 0.3vw;
+    color: #FEEAC4;
+    font-size: 1.5vw;
+  }
+  
+  input[name="TweetLink"]::placeholder{
+    color: #FEEAC4;
+  }
+  
+  .Next{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1vw;
+    border-radius: 2vw;
+  }
+  
+  button:disabled,
+  button[disabled]{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.7vw 2.8vw 0.7vw 2.8vw;
+    font-size: 1.3vw;
+    border-radius: 2vw;
+    opacity: 0.3;
+  }
+  
+  .error{
+    font-size: 2vw;
+    position: relative;
+    bottom: 2vw;
+    visibility: hidden;
+  }
+  
+  .show1{
+    visibility: visible;
+  }
+  
+  .form2 button{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    padding: 0.7vw 2.8vw 0.7vw 2.8vw;
+    font-size: 1.3vw;
+    border-radius: 2vw;
+    margin-bottom: 1.2vw;
+  }
+}
+
+@media all and (min-width:75em){
+  .App{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .Images{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* right: 10vw; */
+  }
+  
+  .Images img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .second{
+    position: relative;
+    right: 3vw;
+  }
+  
+  .first{
+    width: 60% !important;
+  }
+  
+  .Forms{
+    position: relative;
+    left: 5vw;
+    width: 40%;
+  }
+  
+  .Forms h2{
+    font-size: 2vw;
+  }
+  
+  .form1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+  }
+  
+  .form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.3;
+    transition: .5s all ease-in;
+    position: relative;
+    bottom: 5vw;
+  }
+  
+  .show{
+    opacity: 1;
+  }
+  
+  .form1 .tweetButton{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
+    font-size: 1.2vw;
+    border-radius: 2vw;
+  }
+  
+  input[name="TweetLink"]{
+    width: 70%;
+    border: thin solid #FEEAC4;
+    padding: 1vw 0vw 1vw 1vw;
+    background-color: hsl(355deg 83% 43%);
+    border-radius: 0.5vw;
+    color: #FEEAC4;
+    font-size: 1.5vw;
+  }
+  
+  input[name="TweetLink"]::placeholder{
+    color: #FEEAC4;
+  }
+  
+  .Next{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1.2vw;
+    border-radius: 2vw;
+  }
+  
+  button:disabled,
+  button[disabled]{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    margin: 1vw 1vw 2vw 0vw;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1.2vw;
+    border-radius: 2vw;
+    opacity: 0.3;
+  }
+  
+  .error{
+    font-size: 1vw;
+    position: relative;
+    bottom: 2vw;
+    visibility: hidden;
+  }
+  
+  .show1{
+    visibility: visible;
+  }
+
+  .form2 h3{
+    font-size: 2vw;
+  }
+  
+  .form2 button{
+    background: hsl(355deg 83% 43%);
+    color: #FEEAC4;
+    border: none;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    font-size: 1.3vw;
+    border-radius: 2vw;
+    margin-bottom: 1.2vw;
   }
 }
