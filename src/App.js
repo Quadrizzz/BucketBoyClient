@@ -60,7 +60,7 @@ function App() {
 
   const handleClick = ()=>{
     setLoading1(true)
-    fetch('http://34.125.117.167:3001/gettweet',{
+    fetch('https://34.125.117.167:3001/gettweet',{
       method:'POST',
       headers:{
         Accept: 'application.json',
@@ -89,7 +89,7 @@ function App() {
 
   const handleFollow = ()=>{
     setLoading2(true)
-    fetch('http://34.125.117.167:3001/getfollowers',{
+    fetch('https://34.125.117.167:3001/getfollowers',{
       method:'POST',
       headers:{
         Accept: 'application.json',
