@@ -46,6 +46,11 @@ body{
     font-size: 5vw;
     text-align: center;
   }
+
+  .Forms h3{
+    font-size: 3vw;
+    text-align: center;
+  }
   
   .form1{
     display: flex;
@@ -182,6 +187,11 @@ body{
   
   .Forms h2{
     font-size: 3.5vw;
+    text-align: center;
+  }
+
+  .Forms h3{
+    font-size: 3vw;
     text-align: center;
   }
   
@@ -322,6 +332,10 @@ body{
   .Forms h2{
     font-size: 2.8vw;
   }
+
+  .Forms h3{
+    font-size: 2.5vw;
+  }
   
   .form1{
     display: flex;
@@ -460,6 +474,10 @@ body{
   .Forms h2{
     font-size: 2vw;
   }
+
+  .Forms h3{
+    font-size: 1.8vw;
+  }
   
   .form1{
     display: flex;
@@ -597,6 +615,10 @@ body{
   
   .Forms h2{
     font-size: 2vw;
+  }
+
+  .Forms h3{
+    font-size: 1.8vw;
   }
   
   .form1{
