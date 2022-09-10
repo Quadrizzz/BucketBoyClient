@@ -60,7 +60,7 @@ function App() {
 
   const handleClick = ()=>{
     setLoading1(true)
-    fetch('https://bucketboynft.com:3001/gettweet',{
+    fetch('https://bucketboy.onrender.com/gettweet',{
       method:'POST',
       headers:{
         Accept: 'application.json',
@@ -89,7 +89,7 @@ function App() {
 
   const handleFollow = ()=>{
     setLoading2(true)
-    fetch('https://bucketboynft.com:3001/getfollowers',{
+    fetch('https://bucketboy.onrender.com/getfollowers',{
       method:'POST',
       headers:{
         Accept: 'application.json',
