@@ -81,7 +81,7 @@ function App() {
   }
 
   const handleTweetClick = ()=>{
-    window.open(`https://twitter.com/intent/tweet?hashtags=BucketboyNFT&text=${twit}`,'_blank')
+    window.open(`https://twitter.com/intent/tweet?url=${twit}&hashtags=BucketboyNFT`,'_blank')
   }
 
   const handleFollowClick = ()=>{
