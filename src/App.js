@@ -14,8 +14,8 @@ function App() {
   const [Loading1, setLoading1] = useState(false)
   const [Loading2, setLoading2] = useState(false)
   const validateTweet = new RegExp(/((https?):\/\/)?(www.)?twitter\.com(\/@?(\w){1,15})\/status\/[0-9]{19}\?/);
-  const twit = "This is a test twit https://twitter.com/Bucketboynft/status/1567856688891305987?s=20&t=sx7CRSCGWtigalq5ZFGN7Q"
-  const twit2 = "This is a test twit https://t.co/hTYX2lzl9q";
+  const twit = "#BucketboyNFT https://twitter.com/Bucketboynft/status/1567856688891305987?s=20&t=sx7CRSCGWtigalq5ZFGN7Q"
+  const twit2 = "#BucketboyNFT https://t.co/hTYX2lzl9q";
   const height = window.innerHeight;
 
 
