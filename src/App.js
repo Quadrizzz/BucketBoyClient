@@ -71,7 +71,7 @@ function App() {
         id: `${id}`
       })     
     }).then(response => response.json())
-    .then((data) =>{if(data.data.text === twit2){
+    .then((data) =>{if(data.data.text.includes("#BucketboyNFT")){
       setStep(2);
       setButValid(false)
       setNextValid(true)
