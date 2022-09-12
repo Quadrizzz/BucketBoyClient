@@ -126,9 +126,9 @@ function App() {
       </div>
       <div className='Forms'>
         <h2>Follow these steps to join the discord server.</h2>
-        <h3>The below steps are important to authenticate users in our discord community.<br>
-            - Retweet and Quote the pinned tweet on our official twitter account @BucketboyNFT with the #BucketboyNFT<br>
-            - Follow @BucketboyNFT<br>
+        <h3>The below steps are important to authenticate users in our discord community.<br></br>
+            - Retweet and Quote the pinned tweet on our official twitter account @BucketboyNFT with the #BucketboyNFT<br></br>
+            - Follow @BucketboyNFT<br></br>
             - Unlock the discord link</h3>
         <div className={step === 1 ? 'form1 show' : 'form1'}>
           <button disabled={step === 1 ? false : true} className='tweetButton' onClick={handleTweetClick}>Tweet</button>
