@@ -108,7 +108,7 @@ function App() {
         }
         if(data.data[i].username === username){
           setLoading2(false)
-          window.open("https://discord.gg/SVybaRPV", '_blank')
+          window.open("https://discord.gg/UyqcP9mpju", '_blank')
           setError2(false)
         }
         else{
