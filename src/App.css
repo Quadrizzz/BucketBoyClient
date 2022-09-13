@@ -10,6 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 90%;
+    height: fit-content;
   }
   
   .Images{
@@ -153,6 +154,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 90%;
+    height: fit-content;
   }
   
   .Images{
@@ -296,6 +298,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    height: fit-content;
   }
   
   .Images{
@@ -305,6 +308,7 @@ body{
     align-items: center;
     justify-content: space-between;
     position: relative;
+    bottom: 12vw;
     /* right: 10vw; */
   }
   
@@ -326,7 +330,6 @@ body{
     position: relative;
     left: 5vw;
     width: 40%;
-    top: 5vw;
   }
   
   .Forms h2{
@@ -438,6 +441,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    height: fit-content;
   }
   
   .Images{
@@ -447,6 +451,7 @@ body{
     align-items: center;
     justify-content: space-between;
     position: relative;
+    bottom: 7vw;
     /* right: 10vw; */
   }
   
@@ -468,7 +473,6 @@ body{
     position: relative;
     left: 5vw;
     width: 40%;
-    top: 5vw;
   }
   
   .Forms h2{
@@ -580,6 +584,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    height: fit-content;
   }
   
   .Images{
@@ -589,6 +594,7 @@ body{
     align-items: center;
     justify-content: space-between;
     position: relative;
+    bottom: 10vw;
     /* right: 10vw; */
   }
   
@@ -610,7 +616,6 @@ body{
     position: relative;
     left: 5vw;
     width: 40%;
-    top: 12vw;
   }
   
   .Forms h2{

@@ -15,8 +15,8 @@ function App() {
   const [Loading2, setLoading2] = useState(false)
   const validateTweet = new RegExp(/((https?):\/\/)?(www.)?twitter\.com(\/@?(\w){1,15})\/status\/[0-9]{19}\?/);
   const twit = "https://twitter.com/Bucketboynft/status/1567856688891305987?s=20&t=sx7CRSCGWtigalq5ZFGN7Q"
-  const twit2 = "https://t.co/hTYX2lzl9q #BucketboyNFT";
-  const height = window.innerHeight;
+  // const twit2 = "https://t.co/hTYX2lzl9q #BucketboyNFT";
+  // const height = window.innerHeight;
 
 
   
@@ -102,7 +102,7 @@ function App() {
     }).then(response => response.json())
     .then((data) => {
       for(let i = 0; i < data.data.length; i++){
-        if(i === (data.data.length - 1) && Loading2 === true){
+        if(i === (data.data.length - 1) && Loading2 === true && data.data[i].username !== username){
           setLoading2(false)
           setError2(true)
         }
@@ -119,7 +119,7 @@ function App() {
   }
 
   return (
-    <div className="App" style={{height:height + 'px'}}>
+    <div className="App">
       <div className='Images'>
         <img className='first' src='https://cdn.discordapp.com/attachments/1013804888385404979/1013805249330430072/bucket_head4.png' alt='BucketBoy Text'/>
         <img className='second' src='https://cdn.discordapp.com/attachments/1013804888385404979/1013805249665966130/Bucket_water_mark_1.png' alt='BucketBoy Bucket'/>
