@@ -102,7 +102,7 @@ function App() {
     }).then(response => response.json())
     .then((data) => {
       for(let i = 0; i < data.data.length; i++){
-        if(i === (data.data.length - 1) && Loading2 === true && data.data[i].username !== username){
+        if(i === (data.data.length - 1) && data.data[i].username !== username){
           setLoading2(false)
           setError2(true)
         }
