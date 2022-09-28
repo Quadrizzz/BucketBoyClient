@@ -133,13 +133,13 @@ function App() {
         <div className={step === 1 ? 'form1 show' : 'form1'}>
           <button disabled={step === 1 ? false : true} className='tweetButton' onClick={handleTweetClick}>Tweet</button>
           <input disabled={step === 1 ? false : true} placeholder='Enter tweet link'  name='TweetLink' onChange={handleChange}></input>
-          <button disabled={nextValid} onClick={handleClick} className="Next">{Loading1? "↻" : "Next"}</button>
+          <button disabled={nextValid} onClick={handleClick} className="Next">{Loading1? <span>֍</span> : "Next"}</button>
           <p className={Error1? "error show1" : "error"}>This is not a valid tweet</p>
         </div>
         <div className={step === 2 ? 'form2 show' : 'form2'}>
             <h3>Follow this account</h3>
             <button disabled={butValid} onClick={handleFollowClick}>Follow</button>
-            <button disabled={butValid} onClick={handleFollow}>{Loading2? "↻" : "Click Here to Join"}</button>
+            <button disabled={butValid} onClick={handleFollow}>{Loading2? <span>֍</span> : "Click Here to Join"}</button>
             <p className={Error2? "error show1" : "error"}>Ensure you followed the account</p>
         </div>
       </div>
